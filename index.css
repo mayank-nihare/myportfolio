@@ -1,0 +1,938 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+:root {
+  --bgOrange: #e84949;
+}
+#main{
+    height:100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  gap:2rem;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+#M{
+  height:50px;
+  widht:50px;
+}
+#letter{
+  margin-left: -0.1rem;
+  font-size: 28px;
+  font-weight:100;
+}
+.name{
+  display:flex;
+  justify-content:baseline;
+  align-items:center;
+}
+.nav-items {
+  display: flex;
+  gap: 2rem;
+  padding: 0 4rem;
+}
+.nav-items div {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.nav-items div a {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+.nav-items div:hover {
+  transition: 0.8s;
+  font-weight: bold;
+}
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin: 4rem 0 auto;
+  padding: 0 1rem;
+  padding-bottom: 8rem;
+}
+.hero-section-left {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.hero-section-heading {
+  font-size: 35px;
+  color: #343d68;
+  font-weight: 500;
+}
+.role {
+  color: #4e45d5;
+  font-weight: 800;
+}
+.hero-section-sub-heading {
+  font-size: 45px;
+  line-height: 45px;
+}
+.hero-section-description {
+  margin-top: 1rem;
+  width: 70%;
+  font-weight: 500;
+}
+.hero-section-right {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.user-image {
+  padding: 2.5rem;
+  filter: grayscale(1);
+  transition: all 1s;
+  animation: scaleImage 5s linear infinite;
+}
+.user-image img {
+  z-index: -9;
+}
+@keyframes scaleImage {
+  0% {
+    filter: grayscale(0);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: grayscale(1);
+    box-shadow: 3px 3px 10px black;
+  }
+  100% {
+    transform: scale(1);
+    filter: grayscale(0);
+  }
+}
+.icon-dots {
+  z-index: 9;
+  bottom: -1rem;
+  right: 0;
+  animation-name: dotsAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes dotsAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.icon-cube {
+  z-index: 9;
+  top: -0.8em;
+  right: 1em;
+  animation-name: cubeRotation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes cubeRotation {
+  0% {
+    transform: rotateY(0deg) translateY(0px);
+  }
+  50% {
+    transform: rotateY(180deg) translateY(-12px);
+  }
+  100% {
+    transform: rotateY(360deg) translateY(0px);
+  }
+}
+.icon-circle {
+  z-index: 9;
+  left: 0;
+  bottom: 0;
+  animation-name: shakeEffects;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shakeEffects {
+  0% {
+    left: 0;
+    bottom: 0;
+  }
+  50% {
+    left: 5%;
+    bottom: 10%;
+  }
+  100% {
+    left: 0;
+    bottom: 0;
+  }
+}
+.icon-zigzags {
+  z-index: 9;
+  top: 1.5em;
+  left: -0.3em;
+  animation: zigzagAnimation 5s ease-in infinite;
+}
+@keyframes zigzagAnimation {
+  0% {
+    left: 0;
+    bottom: 0;
+  }
+  50% {
+    left: 5%;
+    top: 2%;
+  }
+  100% {
+    left: 0;
+    bottom: 0;
+  }
+}
+.icon-plus {
+  z-index: 9;
+  top: -0.8rem;
+  left: 50%;
+  animation: plusEffect 5s ease-in infinite;
+}
+@keyframes plusEffect {
+  50% {
+    top: 3%;
+    left: 48%;
+  }
+}
+.about-left img{
+  height:500px;
+  width: 500px;
+  object-fit: cover
+}
+#About-me{
+  display:flex;
+  justify-content:space-between;
+}
+.about-right-item1{
+  margin-top:3rem;
+}
+#about{
+  font-size:2rem;
+  position:relative;
+  left:17rem;
+  font-weight:900;
+}
+.about-para{
+  margin-top:1rem;
+  color: #685206; font-family: 'Helvetica Neue', sans-serif; font-size: 20px; 
+  line-height: 26px; 
+   text-align: justify;
+}
+.skills-container {
+  position: relative;
+  display: flex;
+  padding: 5rem;
+  margin: 5rem auto;
+  gap: 30px;
+}
+.skill-container-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.skill-container-right {
+  width: 50%;
+
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 2rem;
+  justify-content: center;
+}
+.blob-style {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: blobAnimation 3s linear infinite;
+}
+@keyframes blobAnimation {
+  50% {
+    top: 54%;
+    left: 46%;
+  }
+}
+.skills-logo {
+  width: 90px;
+  transition: all 0.5s;
+}
+.skills-logo:hover {
+  transform: scale(1.2);
+}
+.skill-heading{
+  margin-top:5rem;
+  font-size:50px;
+  font-style:bold;
+  color:var(--bgOrange);
+  line-height: 50px;
+}
+.caps{
+  font-size:90px;
+}
+/* .skill-subheading{
+  margin-top:1rem;
+  width:85%;
+  text-align:justify;
+} */
+#lets-connect{
+  width:20rem;
+}
+#linkedin{
+  width:5rem;
+  height:5rem;
+  object-fit:cover;
+  margin-top:3rem;
+  margin-left:3rem;
+  transition: all 0.5s;
+}
+#linkedin:hover{
+  transform: scale(1.2);
+}
+#instagram{
+  width:7rem;
+  height:5rem;
+  object-fit:cover;
+  position:relative;
+  left:10rem;
+  bottom:5.2rem;
+  transition: all 0.5s;
+}
+#instagram:hover{
+  transform: scale(1.2);
+}
+#x{
+  width:8rem;
+  height:6rem;
+  object-fit:cover;
+  margin-left:1.5rem;
+  transition: all 0.5s;
+}
+#x:hover{
+  transform: scale(1.2);
+}
+#telegram{
+  width:7rem;
+  height:7rem;
+  position:relative;
+  left:10rem;
+  bottom:6.5rem;
+  transition: all 0.5s;
+}
+#telegram:hover{
+  transform: scale(1.2);
+}
+#Contact-me{
+  display:flex;
+  justify-content:space-evenly;
+  /* justify-content:baseline; */
+}
+
+#social{
+   margin-top:2rem;
+   height:25rem;
+}
+
+
+/* Default styles */
+
+/* Media queries for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .container {
+    width: 700px;
+  }
+  .hero-section {
+    flex-wrap:wrap;
+  
+  }
+  .hero-section-left {
+    align-items:center;
+  
+  }
+  
+  .about-left img{
+    height:300px;
+    width: 300px;
+    position:relative;
+    top:5rem;
+    right:2rem;
+  }
+  #about{
+    font-size:2rem;
+    position:relative;
+    left:8rem;
+  }
+  .about-right{
+    position:relative;
+    right:2rem;
+  }
+  .about-para{
+    font-size: 20px; 
+    line-height: 21px; 
+  }
+  .skills-container {
+ 
+    flex-wrap:wrap;
+    padding: 2rem;
+    margin: 3rem auto;
+    gap: 30px;
+  }
+  .skill-container-right {
+    width: 100%;
+  }
+  #lets-connect{
+    width:20rem;
+    position:relative;
+  }
+  .contact-left{
+    position:relative;
+    left:2rem;
+  }
+
+  #social{
+     margin-top:8rem;
+     height:22rem;
+  }
+
+}
+
+/* Media queries for mobile devices */
+@media only screen and (max-width: 767px) {
+  /* Mobile-specific styles */
+  /* Example: Adjust font sizes, layout, etc. */
+  .container {
+    width: 425px;
+  }
+  .name{
+    margin-left:0.5rem;
+  }
+  .nav-items {
+    display: none;
+  }
+
+  .hero-section {
+    flex-wrap:wrap;
+  }
+  .hero-section-description {
+    width: 100%;
+  }
+  .user-image img {
+    width:15rem;
+    
+  }
+  .about-left img{
+    max-height:70%;
+   max-width:70%;
+   position:relative;
+   top:4rem;
+   left:5rem;
+    opacity:0.4;
+  }
+  #About-me{
+    position:relative;
+    margin:1rem 1rem;
+  }
+  .about-right{
+    position:absolute;
+    /* margin-bottom:8rem; */
+    
+  }
+  .about-right-item1{
+    margin-top:1rem;
+  }
+  #about{
+   position:relative;
+   left:8rem;
+    font-size:2rem;
+    font-weight:900;
+  }
+  .about-para{
+   position:relative;
+   font-size: 15px; 
+   line-height: 22px; 
+  }
+  .skills-container {
+    /* position: relative; */
+    display: flex;
+    flex-wrap:wrap;
+    padding: 1rem;
+    margin: 2rem  auto;
+    gap: 30px;
+  }
+  .skill-container-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-container-right {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .blob-style {
+    width:15rem;
+  }
+
+  .skills-logo {
+    width: 60px;
+    transition: all 0.5s;
+  }
+  .skill-heading{
+    font-size:45px;
+  }
+  #Contact-me{
+    margin: 4rem  auto;
+    height:300px;
+  }
+  .contact-left{
+    width:50%;
+
+  }
+  .contact-rigth{
+    width:50%;
+  }
+  #lets-connect{
+    width:10rem;
+    position:relative;
+    left:1rem;
+    
+  }
+  #linkedin{
+    width:3.2rem;
+    height:3rem;
+    object-fit:cover;
+    transition: all 0.5s;
+  }
+  #instagram{
+    width:4.2rem;
+    height:4rem;
+    object-fit:cover;
+    position:relative;
+    left:7rem;
+    bottom:3.8rem;
+    transition: all 0.5s;
+  }
+  #x{
+    width:5rem;
+    height:5.2rem;
+    object-fit:cover;
+    position:relative;
+    bottom:3rem;
+    left:0.5rem;
+    transition: all 0.5s;
+  }
+  #telegram{
+    width:4.5rem;
+    height:4.5rem;
+    position:relative;
+    left:7rem;
+    bottom:8rem;
+    transition: all 0.5s;
+  }
+  
+  #social{
+     margin-top:4rem;
+     height:12rem;
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+  .container {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .nav-items {
+    display: none;
+  }
+  .hero-section {
+    flex-wrap:wrap;
+    padding-bottom:2rem;
+  }
+  .role {
+    font-size: 35px;
+  }
+  .hero-section-sub-heading {
+    font-size: 35px;
+  }
+  .hero-section-right {
+    position: relative;
+    width:20rem;
+  }
+  .user-image img{
+    position:relative;
+    right:2rem;
+    width:18rem;
+    padding: 1rem;
+  }
+  #About-me{
+   margin:4rem auto;
+   height:400px;
+  }
+  .about-left img{
+    height:90%;
+    width:90%;
+    position:relative;
+    top:5rem;
+    left:4rem;
+    opacity:0.4;
+  }
+  #about{
+    font-size:1.5rem;
+    position:relative;
+    left:8rem;
+    font-weight:900;
+  }
+  .about-para{
+    position:relative;
+    font-size: 12px; 
+    line-height: 20px; 
+  }
+  .skills-container {
+    position: relative;
+    bottom:3rem;
+    display: flex;
+    flex-wrap:wrap;
+    padding: 1rem;
+    margin: 1rem auto;
+    gap: 30px;
+  }
+  .skill-container-right {
+    width: 100%;
+    padding: 1rem;
+  }
+  .skills-logo {
+   position:relative;
+   right:1.5rem;
+    width: 50px;
+  }
+  #Contact-me{
+      padding:1rem;
+      margin:0;
+      height:300px;
+      justify-content:space-evenly;
+  }
+  .contact-left{
+    widht:50%;
+  }
+  #lets-connect{
+    width:10rem;
+  }
+  #linkedin{
+    width:3rem;
+    height:3rem;
+  }
+  #instagram{
+    width:4rem;
+    height:4rem;
+    object-fit:cover;
+    position:relative;
+    left:6.5rem;
+    bottom:3.8rem;
+    transition: all 0.5s;
+  }
+  #x{
+    width:5rem;
+    height:5rem;
+    object-fit:cover;
+    transition: all 0.5s;
+  }
+  #telegram{
+    width:4.5rem;
+    height:4.5rem;
+    position:relative;
+    left:6.5rem;
+    bottom:8rem;
+    transition: all 0.5s;
+  }
+  #social{
+     margin-top:5rem;
+    position:relative;
+     /* height:10rem; */
+     widht:50%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  /* Desktop-specific styles */
+  /* Example: Adjust font sizes, layout, etc. */
+  .container {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .nav-items {
+    display: none;
+  }
+  .hero-section {
+    flex-wrap:wrap;
+  }
+  .role {
+    font-size: 35px;
+  }
+  .hero-section-sub-heading {
+    font-size: 35px;
+  }
+  .hero-section-right {
+    position: relative;
+    width:20rem;
+  }
+  .hero-section-description {
+    width: 100%;
+    font-weight: 500;
+  }
+  .user-image img{
+    position:relative;
+    right:2rem;
+    width:18rem;
+    padding: 1rem;
+  }
+  .about-left img{
+    position:relative;
+    top:8rem;
+    left:1rem;
+    opacity:0.4;
+  }
+  #about{
+    font-size:1.5rem;
+    position:relative;
+    left:8rem;
+    font-weight:900;
+  }
+  .about-para{
+    width:100%;
+    padding:0;
+    font-size: 15px; 
+    line-height: 20px; 
+  }
+  .skills-container {
+    display: flex;
+    flex-wrap:wrap;
+    position:relative;
+    top:9rem;
+    padding: 1rem;
+    margin: 4rem auto;
+    gap: 25px;
+  }
+  .skill-heading{
+    
+    font-size:30px;
+    font-style:bold;
+    color:var(--bgOrange);
+    line-height: 50px;
+  }
+  .skill-container-right {
+    width: 100%;
+  }
+  .skills-logo {
+   position:relative;
+   right:1.5rem;
+    width: 50px;
+  }
+  #Contact-me{
+    margin-top:14rem;
+  }
+  #lets-connect{
+    width:8rem;
+  }
+  #linkedin{
+    width:3rem;
+    height:3rem;
+    object-fit:cover;
+    margin-top:1rem;
+    margin-left:1rem;
+    transition: all 0.5s;
+  }
+  #instagram{
+    width:4rem;
+    height:4rem;
+    object-fit:cover;
+    position:relative;
+    left:6.5rem;
+    bottom:3.8rem;
+    transition: all 0.5s;
+  }
+  #x{
+    width:5rem;
+    height:5rem;
+    object-fit:cover;
+    margin-left:-0.5rem;
+    transition: all 0.5s;
+  }
+  #telegram{
+    width:4.5rem;
+    height:4.5rem;
+    position:relative;
+    left:6.5rem;
+    bottom:8rem;
+    transition: all 0.5s;
+  }
+  #social{
+     margin-top:4rem;
+    position:relative;
+    left:2rem;
+     height:8rem;
+  }
+}
+
+@media only screen and (max-width: 322px){
+  .container {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .nav-items {
+    display: none;
+  }
+  .hero-section {
+    flex-wrap:wrap;
+  }
+  .hero-section-left {
+    gap: 0.5rem;
+  }
+  .hero-section-heading {
+    font-size: 34px;
+  }
+  .role {
+    color: #4e45d5;
+    font-weight: 800;
+    font-size: 20px;
+    font-weight:bold;
+  }
+  .hero-section-sub-heading {
+    font-size: 20px;
+    line-height: 45px;
+  }
+  .hero-section-description {
+    width: 100%;
+  }
+  .hero-section-right {
+    position: relative;
+    width:17rem;
+ 
+  }
+  .user-image img {
+    z-index: -9;
+    width:16rem;
+    height:18rem;
+  }
+  .about-left img{
+    max-height:80%;
+    max-width:80%;
+    position:relative;
+    top:4rem;
+    left:3rem;
+    object-fit: cover
+  }
+  #About-me{
+    display:flex;
+    justify-content:space-between;
+  }
+  .about-right-item1{
+    margin-top:1rem;
+  }
+  #about{
+    font-size:1rem;
+    left:7rem;
+  }
+  .about-para{
+    font-size: 12px; 
+    line-height: 20px; 
+  }
+  .skills-container {
+    position: relative;
+    top:-4rem;
+    display: flex;
+    flex-wrap:wrap;
+    padding: 1rem;
+    margin: 1rem auto;
+    gap: 30px;
+  }
+  .skill-container-left {
+    width: 50%;
+    display: flex;
+    
+    flex-direction: column;
+  }
+  .skill-container-right {
+    width: 100%;
+  
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .skills-logo {
+    width: 50px;
+    transition: all 0.5s;
+  }
+  #Contact-me{
+    margin:0;
+  }
+  #lets-connect{
+    width:12rem;
+  }
+  #linkedin{
+    width:4rem;
+    height:4rem;
+    object-fit:cover;
+    transition: all 0.5s;
+  }
+  #instagram{
+    width:5rem;
+    height:5.4rem;
+    object-fit:cover;
+    position:relative;
+    left:5rem;
+    bottom:4.8rem;
+    transition: all 0.5s;
+  }
+  #x{
+    position:relative;
+    left:0.2rem;
+    bottom:4.8rem;
+    width:7rem;
+    height:6rem;
+    transition: all 0.5s;
+  }
+  #telegram{
+    width:6rem;
+    height:6rem;
+    position:relative;
+    left:5rem;
+    bottom:11rem;
+    transition: all 0.5s;
+  }
+  #social{
+     height:8rem;
+     position:relative;
+     top:3rem;
+     right:7rem;
+  }
+}
